@@ -12,15 +12,15 @@ from utils.get_quotes_today import get_quotes_today
 from utils.reset_counter import reset_counter
 
 async def send_message_time(bot: Bot):
-    await bot.send_message(471969761, f'Это будет сообщение отправлено через несколько секунд после старта бота')
+    await bot.send_message(<your_telegram_id>, f'Это будет сообщение отправлено через несколько секунд после старта бота')
 
 
 async def send_message_cron(bot: Bot):
-    await bot.send_message(471969761, f'Это сообщение будет отправляться ежедневно в указанное время')
+    await bot.send_message(<your_telegram_id>, f'Это сообщение будет отправляться ежедневно в указанное время')
 
 
 async def send_photo_interval(bot: Bot):
-    client = yadisk.Client(token='y0_AgAAAAATJa-qAAtE8QAAAAD7SPw1AACQZZEgsJlEUpZ2JtifA1OhtX5vrw')
+    client = yadisk.Client(token=<your_yandex_token>)
 
     all_photos = []
 
