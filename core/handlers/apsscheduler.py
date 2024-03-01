@@ -11,10 +11,6 @@ from utils.caption_dict import dict_caption
 from utils.get_quotes_today import get_quotes_today
 from utils.reset_counter import reset_counter
 
-
-# id telegram test Arsen 471969761
-# group chat id -777363249
-
 async def send_message_time(bot: Bot):
     await bot.send_message(471969761, f'Это будет сообщение отправлено через несколько секунд после старта бота')
 
@@ -50,7 +46,7 @@ async def send_photo_interval(bot: Bot):
     client.download(f'/old_friends_photos/{all_photos[int_counter]}', 'test.jpg')
 
     await bot.send_photo(
-        -777363249,
+        <your_id>,
         photo=FSInputFile('test.jpg'),
         caption=f"{dict_caption[number_caption]}"
     )
@@ -78,6 +74,6 @@ async def send_quotes_interval(bot: Bot):
     cny = get_quotes_today('CNY')
 
     await bot.send_message(
-        -777363249,
+        <your_id>,
         text=f"\U0001F4B0 {usd}, {eur}, {cny} \U0001F4B0"
     )
