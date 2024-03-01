@@ -46,7 +46,7 @@ async def send_photo_interval(bot: Bot):
     client.download(f'/old_friends_photos/{all_photos[int_counter]}', 'test.jpg')
 
     await bot.send_photo(
-        <your_id>,
+        <your_telegram_chat_id>,
         photo=FSInputFile('test.jpg'),
         caption=f"{dict_caption[number_caption]}"
     )
@@ -74,6 +74,6 @@ async def send_quotes_interval(bot: Bot):
     cny = get_quotes_today('CNY')
 
     await bot.send_message(
-        <your_id>,
+        <your_telegram_chat_id>,
         text=f"\U0001F4B0 {usd}, {eur}, {cny} \U0001F4B0"
     )
